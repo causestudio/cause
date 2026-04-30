@@ -1,0 +1,65 @@
+name: Bug report
+description: Report a problem with cause
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Do not include secrets, API keys, private source code, or sensitive logs.
+
+  - type: input
+    id: version
+    attributes:
+      label: cause version
+      description: The version where you saw the issue.
+      placeholder: "v0.1.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Graph visualization
+        - Behavior Graph
+        - Effect Graph
+        - Diff Graph
+        - Test Graph
+        - Evidence / diagnostics
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Use synthetic or redacted examples only.
+    validations:
+      required: false
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics / logs
+      description: Paste only redacted output.
+    validations:
+      required: false

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reports
+    url: https://cause.studio/security
+    about: Please do not report security issues publicly.
+  - name: General support
+    url: https://cause.studio
+    about: For general questions and product information.
